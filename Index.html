@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Awak ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+    }
+
+    .box {
+      background: rgba(0,0,0,0.4);
+      padding: 30px;
+      border-radius: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #00e676;
+      color: white;
+    }
+
+    #no {
+      background: #ff1744;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>Awak… saya minta maaf 😔</h1>
+  <h2>Awak maafkan saya?</h2>
+
+  <button id="yes" onclick="jawabYa()">YA ❤️</button>
+  <button id="no">TIDAK ❌</button>
+</div>
+
+<script>
+  const noBtn = document.getElementById("no");
+
+  // Bila nak tekan "Tidak", dia lari
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+
+  function jawabYa() {
+    document.body.innerHTML = `
+      <h1>Terima kasih sebab maafkan saya ❤️</h1>
+      <p>Saya janji akan jadi lebih baik...</p>
+    `;
+  }
+</script>
+
+</body>
+</html>
